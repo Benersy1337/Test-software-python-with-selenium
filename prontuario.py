@@ -72,7 +72,7 @@ try:
     conteudo_html = tabela.get_attribute('outerHTML')
     lista = BeautifulSoup(conteudo_html,'html.parser')
 
-    with open('lista_produtos.csv','w') as arquivo:
+    with open('lista_produtos.csv','w',encoding='utf-8') as arquivo:
         for produto in lista.find_all('div',{'class':'card-body border-0'}):
             linha = ''
             for nome in produto.find_all('p'):
