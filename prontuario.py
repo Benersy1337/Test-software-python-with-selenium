@@ -77,9 +77,11 @@ try:
             linha = ''
             for nome in produto.find_all('p'):
                 linha +=nome.text
+                linha += '\n'
                 print(linha)
            
             arquivo.write(linha)
+            
     arquivo.close
 
     
